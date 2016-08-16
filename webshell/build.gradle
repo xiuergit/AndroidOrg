@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '24.0.0'
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+
+//        指定打包是否混淆代码
+        release {
+            //混淆
+            minifyEnabled false
+            //zip优化
+            zipAlignEnabled true
+            //移除无用resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+}
+
+dependencies {
+    provided fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile 'junit:junit:4.12'
+    compile 'com.android.support:support-v4:24.1.0'
+    compile 'com.android.support:appcompat-v7:24.1.0'
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    compile 'org.xutils:xutils:3.3.36'
+}

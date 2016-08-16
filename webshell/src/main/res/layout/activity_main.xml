@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".app.MainActivity">
+
+    <!--<include-->
+        <!--layout="@layout/title_laout" />-->
+    <EditText
+        android:id="@+id/edit_url"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/webView"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/btn_loadurl"
+        android:layout_toStartOf="@+id/btn_loadurl"
+        android:enabled="true"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_loadurl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="连接"
+        android:visibility="gone" />
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_loadurl"
+        android:scrollbars="none" />
+</LinearLayout>

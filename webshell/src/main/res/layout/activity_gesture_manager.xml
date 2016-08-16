@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#48423D"
+    >
+
+    <ImageView
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:src="@drawable/btn_back_pressed"
+        android:id="@+id/gesture_manager_back"
+        android:layout_marginLeft="5dp"
+        android:paddingTop="5dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+
+        >
+    <TextView
+        android:id="@+id/text_gesture"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:gravity="left"
+        android:textSize="16sp"
+        android:layout_marginLeft="40dp"
+        android:text="@string/login_gesture_passwd"
+        android:textColor="#E7E7E6" />
+        <CheckBox
+            android:layout_width="135dp"
+            android:layout_height="25dp"
+            android:id="@+id/rb_gesture"
+            android:layout_weight="1.0"
+            android:background="@drawable/check_selector"
+            android:button="@null"
+            android:checked="true"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="30dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:id="@+id/text_gesture_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="left"
+            android:textSize="16sp"
+            android:layout_marginLeft="40dp"
+            android:text="@string/change_gesture_passwd"
+            android:textColor="#E7E7E6" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:src="@drawable/btn_in_pressed"
+            android:id="@+id/gesture_change_in"
+            android:layout_weight="1.0"
+            android:layout_gravity="right"
+            />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="30dp"
+        >
+
+        <TextView
+            android:id="@+id/text_gesture_forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="left"
+            android:textSize="16sp"
+            android:layout_marginLeft="40dp"
+            android:text="@string/forget_gesture_code"
+            android:textColor="#E7E7E6" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:src="@drawable/btn_in_pressed"
+            android:id="@+id/gesture_forget_in"
+            android:layout_weight="1.0"
+            android:layout_gravity="right"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+<link href="style/login.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="login">
+	<div id="login_con">
+    	<div id="login_form">
+    	<form action="login.php" method="post">
+        	<table>
+            	<tr>
+                	<td>帐号：</td>
+                    <td><input type="text" name="username" class="user" /></td>
+                </tr>
+                <tr>
+                	<td>密码：</td>
+                    <td><input type="password" name="password" class="pass" /></td>
+                </tr>
+                
+                <tr>
+                	<td>&nbsp;</td>
+                    <td>
+                    <input type="submit" value="登录" class="butt" />
+                    <input type="reset" value="重置" class="butt" />
+                    </td>
+                </tr>
+            </table>
+            <input type="hidden" name="act" value="login" />
+        </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
