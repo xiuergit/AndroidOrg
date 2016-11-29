@@ -13,9 +13,12 @@ import java.io.File;
  */
 public class WebAppUtil {
 
+    //Toast toast;
+
 
     // 提示
-    public static void toast(Context context, String msg) {
+    public  static void toastShow(Context context, String msg) {
+
         Toast.makeText(context, msg, Toast.LENGTH_LONG).show();
     }
     /**返回屏幕的像素的宽和高  int[]={width,height}   @param context @return*/
@@ -96,5 +99,12 @@ public class WebAppUtil {
             }
         }
     }
+
+
+
+
+
+
+
 
 }

@@ -1,9 +1,13 @@
 package com.bigdata.webshell.uiview;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Handler;
 import android.util.Log;
 import android.webkit.JavascriptInterface;
+
+import com.bigdata.webshell.utils.ImageUtil;
+import com.bigdata.webshell.utils.WebAppUtil;
 
 /**
  * Created by xiuer on 16/8/16.
@@ -23,14 +27,23 @@ public class ZXWebInterface  {
         mHandler=mHandler;
     }
 
-//    @JavascriptInterface
-//    public void exit() {
-//        mHandler.post(new Runnable() {
-//            public void run() {
-//               // app.exit();
-//            }
-//        });
-//    }
+    @JavascriptInterface
+    public void exit() {
+        mHandler.post(new Runnable() {
+            public void run() {
+               // app.exit();
+            }
+        });
+    }
+
+    @JavascriptInterface
+    public  void  openCamera(){
+        WebAppUtil.toastShow(mContext,"打开照相机");
+
+        ImageUtil  imageUtil= new ImageUtil((Activity) mContext);
+        imageUtil.selectImage();
+
+    }
 
 //    @JavascriptInterface
 //    public void SelectImg(String uid) {

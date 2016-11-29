@@ -1,0 +1,88 @@
+<!Doctype html/>
+<head >
+    <meta charset="UTF-8" content="TEXT/HTML">
+    <meta http-equiv="Accept" >
+    <title>H5结构的学习</title>
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1,minumum-scale=1">
+</head>
+
+<body>
+
+<article >
+
+    <header>
+        h5的结构的学习
+    </header>
+
+    <ul>
+        <li>article元素</li>
+        <li>section元素</li>
+        <li>nav元素</li>
+    </ul>
+
+    <article >
+        <header><h2>article元素的学习</h2></header>
+        <p>article元素代表文档、页面或应用程序中独立的，完整的、可以独自被外部引用的内容，可以是一篇博客、或报刊杂志中的一篇文章、或一篇论坛帖子，
+            一段用户评论、以及一个独立的插件</p>
+    </article>
+
+    <article >
+        <header> 独立的插件 ,可以左右上下滑动</header>
+        <object>
+            <param name="allowFullScreen" value="true">
+            <embed src="#" width="300" height="30" >
+                embed 用来插入各种多媒体，格式可以是midi、
+                wav、aiff、au、mp3
+            </embed>
+
+        </object>
+    </article>
+
+
+     <article>
+         <header><h2>section元素</h2></header>
+         <p>
+           <b>section元素</b> section元素用来对网站或应用中的内容进行分块，一个section元素通常由内容与标题组成；也就是说当需要对文章分段，
+             或者对内容分段，并且每段都有标题时用section；而article 是表示整篇内容；
+             并且，当需要添加样式或定义脚本行为时，用div；<b>section中的元素可以单独存储到数据库中或输出到word中</b>
+         </p>
+
+          <section>
+              <header><h4>注意</h4></header>
+              <p>1、不要将section元素用作设置样式的页面容器，那是div的工作</p>
+              <p>2、如何article、aside、nav 更符合情况，不要使用section</p>
+              <p>3、没有标题的内容块不要用section</p>
+          </section>
+     </article>
+
+
+
+     <article>
+         <header><h2>nav元素</h2></header>
+         <p>nav元素是一个可以用来作为页面导航按钮的链接组，
+             其中的导航元素链接到当前页面，或其他页面的其他部分。bing不是所有的链接都要放进nav元素，只要将主要的、
+             基本的放入即可</p>
+
+         <nav>
+             <ul>
+               <li> <a href="mycv.html">我的简历</a> </li>
+             </ul></nav>
+
+          <p>以下场合适用</p>
+         <p>1、传统的导航栏</p>
+         <p>2、侧边导航栏</p>
+         <p>3、页内导航</p>
+         <p>4、翻页操作</p>
+     </article>
+
+
+
+
+
+</article>
+
+
+
+
+</body>

@@ -1,4 +1,4 @@
-package com.cbdry.app;
+package com.bigdata.webshell.app;
 
 /**
  * 单列模式测试

@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+body {
+min-width: 320px;
+font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
+color: #333;
+-webkit-text-size-adjust: none
+}
+

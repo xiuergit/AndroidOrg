@@ -7,6 +7,67 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.org.xiuer.androidorg.app.WebShellTestActivity">
+    tools:context=".BaseActivity$WebShellTestActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editCode"
+        android:hint="填写二维码的内容"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="生成二维码"
+        android:id="@+id/button"
+        android:layout_below="@id/editCode"
+        android:onClick="generativeCode"
+        />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/imageViewCode"
+        android:src="@drawable/code"
+        android:layout_below="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解析二维码"
+        android:id="@+id/button2"
+        android:layout_below="@+id/imageViewCode"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"
+        android:onClick="analysisCode"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+
+        android:id="@+id/imageViewCompress"
+
+        android:layout_below="@+id/button"
+        android:layout_toRightOf="@id/imageViewCode"
+
+        android:src="@drawable/code"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="压缩"
+        android:id="@+id/button3"
+        android:layout_below="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="41dp"
+        android:onClick="compressAnalysisCode"/>
+
 
 </RelativeLayout>
