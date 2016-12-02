@@ -12,6 +12,7 @@ import android.widget.FrameLayout;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.BarLineChartBase;
 import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.AxisBase;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
@@ -22,6 +23,8 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 
+import com.github.mikephil.charting.formatter.AxisValueFormatter;
+import com.github.mikephil.charting.formatter.DefaultAxisValueFormatter;
 import com.github.mikephil.charting.interfaces.datasets.IBarDataSet;
 import com.google.android.gms.auth.firstparty.shared.FACLConfig;
 import com.org.orglib.Activity.BaseActivity;
@@ -96,14 +99,14 @@ public  class ChartActivity extends BaseActivity implements View.OnClickListener
        BarDataSet barDataSet=new BarDataSet(barEntries,mStock.getName());
 
        barDataSet.setDrawValues(true);
-       barDataSet.setBarBorderWidth(4);
-//       ArrayList<BarDataSet>dataSets=new ArrayList<>();
-//       dataSets.add(barDataSet);
+       barDataSet.setBarBorderWidth(13);
+       ArrayList<IBarDataSet>dataSets=new ArrayList<>();
+       dataSets.add(barDataSet);
 
-       BarData barData=new BarData( );
+       BarData barData=new BarData(dataSets );
        barData.setBarWidth(12);
        barData.setDrawValues(true);
-       barData.addDataSet(barDataSet);
+    //   barData.addDataSet(barDataSet);
        //barData.addDataSet(barDataSet);
        return  barData;
 
@@ -192,7 +195,42 @@ public  class ChartActivity extends BaseActivity implements View.OnClickListener
                Log.i(TAG, "onClick: "+tag);
                BarChart mChart=new BarChart(this);
                mChart.setDrawValueAboveBar(true);
-               showChart(mChart,getBarData());
+               mChart.setData(getBarData());
+               mContainer.removeAllViews();
+               mContainer.addView(mChart);
+               FrameLayout.LayoutParams params=new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                       ViewGroup.LayoutParams.MATCH_PARENT);
+               mChart.setLayoutParams(params);
+               mChart.setDrawValueAboveBar(true);
+               mChart.setDrawBorders(true);
+               mChart.setDrawBarShadow(true);
+               mChart.setMinimumWidth(12);
+
+               XAxis xAxis=mChart.getXAxis();
+               xAxis.setDrawAxisLine(true);
+
+               xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+               xAxis.setLabelRotationAngle(30);
+               xAxis.setLabelCount(6);
+               AxisValueFormatter axisValueFormatter=new AxisValueFormatter() {
+                  String [] test=new String[]{
+                    "0","1","2","3","5"   ,"6"
+                  };
+
+                   @Override
+                   public String getFormattedValue(float value, AxisBase axis) {
+                       Log.i(TAG, "getFormattedValue: "+value);
+                       return  "123";
+                   }
+
+                   @Override
+                   public int getDecimalDigits() {
+                       return 0;
+                   }
+               };
+
+               xAxis.setValueFormatter(axisValueFormatter);
+               //showChart(mChart,getBarData());
            }
             else if(tag.equals( getResources().getString(R.string.button_tag_candleStickChart))){
                Log.i(TAG, "onClick: "+tag);
