@@ -1,8 +1,10 @@
-package com.org.xiuer.androidorg;
+package com.org.xiuer.androidorg.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.MotionEvent;
+
+import com.org.xiuer.androidorg.R;
 
 public class JNIActivity extends Activity {
 

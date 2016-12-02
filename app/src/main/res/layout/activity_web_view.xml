@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BaseActivity$WebViewActivity">
+    tools:context="com.org.orglib.Activity.BaseActivity$WebViewActivity">
 
     <Button
         android:id="@+id/bt_mycv"
@@ -23,6 +23,14 @@
         android:onClick="study"
         />
 
+    <Button
+        android:id="@+id/bt_form"
+        android:layout_toRightOf="@id/bt_h5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="表单的学习"
+        android:onClick="studyform"
+        />
     <com.bigdata.webshell.uiview.ZXWebView
         android:id="@+id/zx_webview"
         android:layout_width="match_parent"

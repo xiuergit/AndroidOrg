@@ -1,4 +1,4 @@
-package com.org.xiuer.androidorg;
+package com.org.xiuer.androidorg.activity;
 
 import android.app.AlertDialog;
 import android.graphics.Bitmap;
@@ -11,6 +11,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.bigdata.webshell.third.QRCode;
+
+import com.org.orglib.Activity.BaseActivity;
+import com.org.xiuer.androidorg.R;
 
 import org.xutils.image.ImageDecoder;
 import org.xutils.view.annotation.ContentView;

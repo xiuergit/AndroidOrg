@@ -1,4 +1,4 @@
-package com.org.xiuer.androidorg;
+package com.org.xiuer.androidorg.activity;
 
 import android.app.LauncherActivity;
 import android.content.Intent;

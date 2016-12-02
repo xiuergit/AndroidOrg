@@ -12,27 +12,27 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <application
-        android:name=".MyApplication"
+        android:name="com.org.orglib.Activity.MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".LoadActivity">
+        <activity android:name=".activity.LoadActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WebShellTestActivity" />
-        <activity android:name=".BaseActivity" />
-        <activity android:name=".WebViewActivity" />
-        <activity android:name=".ChartActivity" />
-        <activity android:name=".ZXViewActivity" />
-        <activity android:name=".NetWorkActivity" />
-        <activity android:name=".JNIActivity" />
-        <activity android:name=".DepthStudyActivity"></activity>
+        <activity android:name=".activity.WebShellTestActivity" />
+        <activity android:name="com.org.orglib.Activity.BaseActivity" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.ChartActivity" />
+        <activity android:name=".activity.ZXViewActivity" />
+        <activity android:name=".activity.NetWorkActivity" />
+        <activity android:name=".activity.JNIActivity" />
+        <activity android:name=".activity.DepthStudyActivity"></activity>
     </application>
 
 </manifest>

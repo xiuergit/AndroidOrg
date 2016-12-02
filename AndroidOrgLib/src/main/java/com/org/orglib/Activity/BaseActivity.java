@@ -1,4 +1,4 @@
-package com.org.xiuer.androidorg;
+package com.org.orglib.Activity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -16,9 +16,11 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.v4.app.FragmentActivity;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Display;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Toast;
 
 import org.xutils.x;
@@ -34,12 +36,30 @@ import java.io.IOException;
 
 public class BaseActivity extends FragmentActivity {
 
-    private final String TAG = "xiuer";
+    private final String TAG = "AndroidOrg";
 
     private static final File path = Environment.getExternalStorageDirectory();
 
     public MyApplication app;
 
+
+
+    /**
+     * 获取屏幕的宽与高
+     * @return int［］ 0：width 1:height
+     */
+    public   int[] screenRect(){
+        int screenValue[]=new int[2];
+        //获取屏幕的宽与高
+        WindowManager manager = this.getWindowManager();
+        DisplayMetrics outMetrics = new DisplayMetrics();
+        manager.getDefaultDisplay().getMetrics(outMetrics);
+        int width = outMetrics.widthPixels;
+        int height = outMetrics.heightPixels;
+        screenValue[0]=width;
+        screenValue[1]=height;
+        return screenValue;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

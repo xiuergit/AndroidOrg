@@ -1,1 +1,2 @@
-include ':app', ':MPChartLib', ':webshell'
+include ':app', ':MPChartLib', ':webshell', ':AndroidOrgLib'
+//,':marketsdk'

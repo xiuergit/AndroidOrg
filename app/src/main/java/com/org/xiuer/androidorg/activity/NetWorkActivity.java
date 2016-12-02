@@ -1,4 +1,4 @@
-package com.org.xiuer.androidorg;
+package com.org.xiuer.androidorg.activity;
 
 import android.os.Bundle;
 import android.os.Environment;
@@ -6,6 +6,10 @@ import android.util.Log;
 import android.view.View;
 import android.webkit.URLUtil;
 import android.widget.Button;
+
+
+import com.org.orglib.Activity.BaseActivity;
+import com.org.xiuer.androidorg.R;
 
 import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;

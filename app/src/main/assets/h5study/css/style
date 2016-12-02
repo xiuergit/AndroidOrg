@@ -3,7 +3,8 @@
 body {
 min-width: 320px;
 font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;
-color: #333;
+color: #FF00FF;
 -webkit-text-size-adjust: none
 }
+nav{float;left;width:20%}
 

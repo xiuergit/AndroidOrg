@@ -1,7 +1,9 @@
-package com.org.xiuer.androidorg;
+package com.org.xiuer.androidorg.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.org.xiuer.androidorg.R;
 
 public class DepthStudyActivity extends AppCompatActivity {
 

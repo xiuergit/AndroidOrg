@@ -1,6 +1,5 @@
-package com.org.xiuer.androidorg;
+package com.org.xiuer.androidorg.activity;
 
-import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,6 +13,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
+import com.org.orglib.Activity.BaseActivity;
+import com.org.xiuer.androidorg.R;
 import com.org.xiuer.androidorg.view.ZXView;
 
 import org.xutils.view.annotation.ContentView;
@@ -93,7 +94,7 @@ public class ZXViewActivity extends BaseActivity {
         mEditText.setFocusableInTouchMode(true);
         mEditText.requestFocus();
         manager =(InputMethodManager) mEditText.getContext().
-                getSystemService(Context.INPUT_METHOD_SERVICE);
+                getSystemService(INPUT_METHOD_SERVICE);
         manager.showSoftInput(mEditText,0);
         mEditText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -117,7 +118,6 @@ public class ZXViewActivity extends BaseActivity {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-
         manager.hideSoftInputFromWindow(mEditText.getWindowToken(),0);
         return true;
     }

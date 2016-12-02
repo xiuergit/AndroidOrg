@@ -1,4 +1,4 @@
-package com.org.xiuer.androidorg;
+package com.org.xiuer.androidorg.activity;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +7,9 @@ import com.bigdata.webshell.uiview.ZXWebChromeClient;
 import com.bigdata.webshell.uiview.ZXWebClient;
 import com.bigdata.webshell.uiview.ZXWebInterface;
 import com.bigdata.webshell.uiview.ZXWebView;
+
+import com.org.orglib.Activity.BaseActivity;
+import com.org.xiuer.androidorg.R;
 
 import org.xutils.view.annotation.ContentView;
 import org.xutils.view.annotation.ViewInject;
@@ -25,7 +28,7 @@ import org.xutils.view.annotation.ViewInject;
 
 
            // mWebview.loadUrl("fil.e:///android_asset/moban/index.html");
-           mWebview.loadUrl(url1);
+            mWebview.loadUrl(url1);
             mWebview.setmWebClient(new ZXWebClient());
             mWebview.setWebChromeClient(new ZXWebChromeClient());
             mWebview.addJavascriptInterface(new ZXWebInterface(this),
@@ -37,10 +40,16 @@ import org.xutils.view.annotation.ViewInject;
             mWebview.loadUrl("file:///android_asset/h5study/mycv.html");
 
         }
-      public void  study(View view){
+         public void  study(View view){
 
-        mWebview.loadUrl("file:///android_asset/h5study/htmlstructural");
+            mWebview.loadUrl("file:///android_asset/h5study/htmlstructural.html");
+
+         }
+          public void studyform(View view){
+
+           mWebview.loadUrl("file:///android_asset/h5study/htmlform.html");
 
     }
+
 
     }
