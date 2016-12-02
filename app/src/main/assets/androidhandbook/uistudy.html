@@ -1,0 +1,88 @@
+<!Doctype html/>
+<head>
+    <meta charset="utf-8" content="text/html">
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1,minumum-scale=1">
+    <title>TextView</title>
+    <link rel="stylesheet" href="css/uistyle.css">
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+  document.write("hellow");
+function autocreate(){
+    //创建table表格
+    var table=document.getElementById("shuxing");
+    table.setAttribute("border","1");
+    table.setAttribute("background","red");
+    //获取行数值
+    var line=4;
+    var list=3;
+   
+
+   var array=new Array("1","2","3","4");
+
+   //document.write(array[0]);
+
+    for(var i=0;i<=line;i++){
+        //创建tr
+        var tr=document.createElement("tr");
+        for(var j=0;j<=list;j++){
+            var td=document.createElement("td");
+
+            td.appendChild(document.createTextNode(array[j])); 
+
+            tr.appendChild(td);
+                        }
+            table.appendChild(tr);
+        }
+
+
+  
+          
+
+        //document.getElementById("d1").appendChild(table);
+    }
+
+window.onload=autocreate();
+
+  
+
+
+</script>
+
+<article>
+    <header>
+        TextView
+    </header>
+
+
+    <section>
+        <title>描述 </title>
+        <article> TextView组件主要用于静态文本的显示，</article>
+    </section>
+
+    <article>
+        <table id="shuxing" class="table">
+            <tr id="head">
+                <td>属性</td>
+                <td>内容</td>
+            </tr>
+
+        </table>
+
+    </article>
+    autocreate();
+
+    <footer>
+        <p>电话:15536849144 邮箱15536849144@163.com</p>
+    </footer>
+</article>
+
+<input type="button" value="添加表格" onclick="autocreate()">
+
+
+</body>
