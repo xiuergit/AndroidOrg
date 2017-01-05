@@ -32,7 +32,9 @@
         <activity android:name=".activity.ZXViewActivity" />
         <activity android:name=".activity.NetWorkActivity" />
         <activity android:name=".activity.JNIActivity" />
-        <activity android:name=".activity.DepthStudyActivity"></activity>
+        <activity android:name=".activity.DepthStudyActivity" />
+        <activity android:name=".activity.graph.FlowerActivity" />
+        <activity android:name=".activity.GraphActivity"></activity>
     </application>
 
 </manifest>

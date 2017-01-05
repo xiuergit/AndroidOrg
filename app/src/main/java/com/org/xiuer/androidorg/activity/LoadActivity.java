@@ -14,7 +14,7 @@ public  class LoadActivity extends LauncherActivity {
 
         Class<?>[]classes={ChartActivity.class, WebShellTestActivity.class,
                  WebViewActivity.class,
-                ZXViewActivity.class,
+                GraphActivity.class,
 
                 NetWorkActivity.class,
                 DepthStudyActivity.class

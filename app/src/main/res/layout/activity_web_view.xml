@@ -9,27 +9,27 @@
         android:id="@+id/bt_mycv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="我的简历"
         android:onClick="opencv"
+        android:text="我的简历"
         />
 
 
     <Button
         android:id="@+id/bt_h5"
-        android:layout_toRightOf="@id/bt_mycv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="h5结构的学习"
+        android:layout_toRightOf="@id/bt_mycv"
         android:onClick="study"
+        android:text="uistudy练习"
         />
 
     <Button
         android:id="@+id/bt_form"
-        android:layout_toRightOf="@id/bt_h5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="表单的学习"
+        android:layout_toRightOf="@id/bt_h5"
         android:onClick="studyform"
+        android:text="表单的学习"
         />
     <com.bigdata.webshell.uiview.ZXWebView
         android:id="@+id/zx_webview"

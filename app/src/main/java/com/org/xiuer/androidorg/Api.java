@@ -46,4 +46,7 @@ public class Api {
 
         public static final String STRUrl="http://t1.chinabigdata.com/PostService.aspx?Service=NewsEventService.Gets&Function=GetsService&label=";
 
+
+        public static final String A_GU = "http://q1.chinabigdata.com/quote/SortRequest?indicate-name=ChangeRange&sector-id=100924";
+
 }

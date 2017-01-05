@@ -1,4 +1,4 @@
-package com.org.xiuer.androidorg.view;
+package com.org.orglib.View;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -10,7 +10,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.Button;
 
-import com.org.xiuer.androidorg.R;
+import com.org.orglib.R;
 
 /**
  * Created by xiuer on 16/9/6.
@@ -49,16 +49,19 @@ public class ZXView extends Button {
                 R.styleable.ZXView,defStyleAttr,0);
 
         for(int i=0;i<array.getIndexCount();i++){
+
+
             switch (array.getIndex(i)){
-                case R.styleable.ZXView_titleText:
-                    mTitleText=array.getString(i);
-                    break;
-                case R.styleable.ZXView_titleSize:
-                    mTitleSize=array.getDimensionPixelSize(i,16);
-                    break;
-                case  R.styleable.ZXView_titleColor:
-                    mTitleColor=array.getColor(i,Color.GRAY);
-                    break;
+
+//                case R.styleable.ZXView_titleText:
+//                    mTitleText=array.getString(i);
+//                    break;
+//                case R.styleable.ZXView_titleSize:
+//                    mTitleSize=array.getDimensionPixelSize(i,16);
+//                    break;
+//                case  R.styleable.ZXView_titleColor:
+//                    mTitleColor=array.getColor(i,Color.GRAY);
+//                    break;
             }
 
         }
